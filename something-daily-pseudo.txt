@@ -6,28 +6,22 @@ and set a reminder or task for it to be completed within the chosen calendar app
 choose three Something categories and send daily reminders.
 
 class Main {
-	Util:
+	UTIL:
         HashMap<String, String>;
-    Variables:
+    VARIABLES:
         ?
-    Methods:
-	    createSomething(String name) {
+    METHODS:
+	    createSomething(String name)
             String name = name;
             String description = input();
 
             create HashMap<name, input(or task data)>
-        }
-        deleteSomething(String name) {
+        deleteSomething(String name)
             remove HashKey name;
-        }
-    
-
-
-		
-
+    RUN:
 class Something {
-	Util:
-    Variables:
+	UTIL:
+    VARIABLES:
 	    ***Needs Hash integration ***
 		String name;
 		String description;
@@ -35,7 +29,7 @@ class Something {
 		boolean random = true;
         boolean chosen = false;
 
-	Methods
+	METHODS
 		setName();
 			sets as hash key
 		setDescription();
@@ -47,25 +41,25 @@ class Something {
 
 
 class Task {
-    Util:
+    UTIL:
         ArrayList
-    Variables:
+    VARIABLES:
     	String name;
         String description;
         boolean dueDate;
         boolean timeReminder;
         boolean locationReminder;
         boolean completed;
-    Methods:
-class Interface {
-    Util:
+    METHODS:
+class UserInterface {
+    UTIL:
         ArrayList<Something>;
-    Variables:        
+    VARIABLES:        
         int dailyRange; //how many Somethings to frequently remind you of
 	    int frequency; //how often to remind you. 1 = daily, 2 = every other day, etc;
         Array<String> options;
 
-    Methods:
+    METHODS:
         listOptions()
             Create something = newSomething();
             Delete something = deleteSomething();
@@ -92,15 +86,24 @@ class Interface {
             sout(getDayRange())
             sout(getFrequency())
         getTimeOfDay();
-    Run:
-        sout("Good " + getTimeOfDay + "!")
-        sout(getSettings)
+    RUN:
+        run()
+            sout("Good " + getTimeOfDay + "!")
+            sout(getSettings)
 
-        sout("What would you like to do?")
-            listOptions();
-            input();
-                if "quit"
-                    sout("Done!")
-                    getSettings()
-                    sout("Goodbye!")
-                    break;
+            sout("What would you like to do?")
+                listOptions();
+                    input();
+            if "quit"
+                sout("Done!")
+                getSettings()
+                sout("Goodbye!")
+                break;
+
+
+/* NOTES */
+/*
+1. Get resources for UI.
+2. Create test folder.
+3. Check off roadmap.
+*/
