@@ -1,0 +1,106 @@
+Something Daily (SD) is a GTD inspired app.
+
+SD will integrate with a calendar app (Plans for GMail then Outlook). You choose from a list or create a category of tasks you would like to accomplish (i.e.
+Something Cleaned, Something Fixed, Something Made, etc.) Each category stores a list of tasks to accomplish. By default, it will choose one task at random from a category
+and set a reminder or task for it to be completed within the chosen calendar app. You can specify what task you would like to prioritize in each category. By default it will
+choose three Something categories and send daily reminders.
+
+class Main {
+	Util:
+        HashMap<String, String>;
+    Variables:
+        ?
+    Methods:
+	    createSomething(String name) {
+            String name = name;
+            String description = input();
+
+            create HashMap<name, input(or task data)>
+        }
+        deleteSomething(String name) {
+            remove HashKey name;
+        }
+    
+
+
+		
+
+class Something {
+	Util:
+    Variables:
+	    ***Needs Hash integration ***
+		String name;
+		String description;
+		ArrayList <Task or HashCode?> tasks;
+		boolean random = true;
+        boolean chosen = false;
+
+	Methods
+		setName();
+			sets as hash key
+		setDescription();
+			sets as hash value
+		add(hash key);
+			this.tasks.add(hash key);
+		remove(key name);
+
+
+
+class Task {
+    Util:
+        ArrayList
+    Variables:
+    	String name;
+        String description;
+        boolean dueDate;
+        boolean timeReminder;
+        boolean locationReminder;
+        boolean completed;
+    Methods:
+class Interface {
+    Util:
+        ArrayList<Something>;
+    Variables:        
+        int dailyRange; //how many Somethings to frequently remind you of
+	    int frequency; //how often to remind you. 1 = daily, 2 = every other day, etc;
+        Array<String> options;
+
+    Methods:
+        listOptions()
+            Create something = newSomething();
+            Delete something = deleteSomething();
+            Add task = addToSomething();
+                which Something?
+                Any reminders?
+            Delete task = removeFromSomething();
+            Choose task = setPriority()
+                Which something?
+            chooseSomethings()
+                for (Something thing : list)
+                    if (thing.chosen) //is this right?
+                        display thing for set frequency and range
+            getChosenSomethings();
+            setDayRange(int range)
+                this.dailyRange = range;
+            getDayRange()
+            setFrequency(int frequency)
+                this.frequency = frequency;
+            getFrequency;
+        getSettings();
+            sout("Your current settings are:)
+            sout(getChosenSomethings())
+            sout(getDayRange())
+            sout(getFrequency())
+        getTimeOfDay();
+    Run:
+        sout("Good " + getTimeOfDay + "!")
+        sout(getSettings)
+
+        sout("What would you like to do?")
+            listOptions();
+            input();
+                if "quit"
+                    sout("Done!")
+                    getSettings()
+                    sout("Goodbye!")
+                    break;
